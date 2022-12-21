@@ -34,7 +34,12 @@ class ConvLSTMCell(nn.Module):
                               kernel_size=self.kernel_size,
                               padding=self.padding,
                               bias=self.bias)
-
+    def _make_layer(self, input_dim, hidden_dim, kernel_size):
+        return nn.Sequential(
+            nn.Conv2d( ),
+            nn.BatchNorm2d(out_channels))
+    
+    
     def forward(self, input_tensor, cur_state):
         h_cur, c_cur = cur_state
 
